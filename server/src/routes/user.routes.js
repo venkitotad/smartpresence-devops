@@ -50,7 +50,7 @@ router.post("/sync", requireAuth(), async (req, res) => {
       console.log(`Student synced: ${email}`);
     }
 
-    // 🔥 CRITICAL FIX — Store role in Clerk publicMetadata
+    
     await clerkClient.users.updateUser(userId, {
       publicMetadata: {
         role: appUser.role,
