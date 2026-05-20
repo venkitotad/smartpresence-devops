@@ -54,6 +54,10 @@ app.get("/health", async (req, res) => {
   }
 });
 
+app.get("/",(req,res)=>{
+ res.send("SmartPresence API Running")
+})
+
 // Routes
 app.use('api/student',campusCheck);
 app.use("/api/users", userRouter);
